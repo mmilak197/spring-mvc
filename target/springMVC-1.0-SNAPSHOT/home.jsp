@@ -8,7 +8,10 @@
 <p>Home ${nick}</p>
 
 <div style="text-align: center">
+
+    <a href="login">Login</a>
     <a href="register">Register</a>
+
 </div>
 
 <c:forEach var="product" items="${products}">
