@@ -19,15 +19,19 @@ public class ProductManager {
     private List<Product> prepareProducts() {
 
         List<Product> products = new ArrayList<Product>();
-        Product product = new Product("koszulki", "Koszulka1");
-        Product secondProduct = new Product("koszulki", "Koszulka2");
+        Product product = new Product("koszulki", "KoszulkaA");
+        Product secondProduct = new Product("koszulki", "KoszulkaB");
         Product thirdProduct = new Product("spodnie", "Spodnie1");
         Product forthProduct = new Product("spodnie", "Spodnie2");
+        Product fifthProduct = new Product("bluzy", "BluzaA");
+        Product sixthProduct = new Product("bluzy", "KoszulkaA");
 
         products.add(product);
         products.add(secondProduct);
         products.add(thirdProduct);
         products.add(forthProduct);
+        products.add(fifthProduct);
+        products.add(sixthProduct);
 
         return products;
     }

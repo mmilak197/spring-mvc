@@ -18,16 +18,30 @@
             <a class="dropdown-item" href="${category}">${category}</a>
         </c:forEach>
     </div>
-    <a href="?count=1">1</a>
-    <a href="?count=2">2</a>
 </div>
 <h1 style="margin: 30px">Kategoria: ${category}</h1>
 <div style="margin: 30px">
-    <ul class="list-group" style="width: 400px">
+    <a href="http://localhost:8123/products/ALL;sortBy=name">Sort all by product name</a>
+    <br />
+    <a href="http://localhost:8123/products/ALL;sortBy=name,category">Sort all by product name and category</a>
+</div>
+<div style="margin: 30px">
+    <table class="table table-bordered" style="width: 500px">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Product Name</th>
+            <th scope="col">Category</th>
+        </tr>
+        </thead>
+        <tbody>
         <c:forEach var="product" items="${products}">
-            <li class="list-group-item">${product.name}</li>
+            <tr>
+                <td>${product.name}</td>
+                <td>${product.category}</td>
+            </tr>
         </c:forEach>
-    </ul>
+        </tbody>
+    </table>
 </div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
